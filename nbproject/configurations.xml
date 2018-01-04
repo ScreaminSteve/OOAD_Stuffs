@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>Benutzer.h</itemPath>
+      <itemPath>CUI.h</itemPath>
+      <itemPath>Catering.h</itemPath>
+      <itemPath>Einladung.h</itemPath>
+      <itemPath>Equipment.h</itemPath>
+      <itemPath>Meeting.h</itemPath>
+      <itemPath>MeetingVerwaltung.h</itemPath>
+      <itemPath>Mitarbeiter.h</itemPath>
+      <itemPath>Raum.h</itemPath>
+      <itemPath>Raumverwaltung.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>Benutzer.cpp</itemPath>
+      <itemPath>CUI.cpp</itemPath>
+      <itemPath>Catering.cpp</itemPath>
+      <itemPath>Einladung.cpp</itemPath>
+      <itemPath>Equipment.cpp</itemPath>
+      <itemPath>Meeting.cpp</itemPath>
+      <itemPath>MeetingVerwaltung.cpp</itemPath>
+      <itemPath>Mitarbeiter.cpp</itemPath>
+      <itemPath>Raum.cpp</itemPath>
+      <itemPath>Raumverwaltung.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <standard>8</standard>
+        </ccTool>
+      </compileType>
+      <item path="Benutzer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Benutzer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CUI.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CUI.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Catering.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Catering.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Einladung.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Einladung.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Equipment.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Equipment.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Meeting.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Meeting.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MeetingVerwaltung.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MeetingVerwaltung.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Mitarbeiter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Mitarbeiter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Raum.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Raum.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Raumverwaltung.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Raumverwaltung.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>8</standard>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="Benutzer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Benutzer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CUI.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CUI.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Catering.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Catering.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Einladung.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Einladung.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Equipment.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Equipment.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Meeting.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Meeting.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MeetingVerwaltung.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="MeetingVerwaltung.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Mitarbeiter.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Mitarbeiter.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Raum.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Raum.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Raumverwaltung.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Raumverwaltung.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
