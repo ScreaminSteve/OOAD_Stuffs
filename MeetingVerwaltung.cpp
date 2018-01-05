@@ -11,7 +11,7 @@ void MeetingVerwaltung::setCatering( bool isCater )
 
 void MeetingVerwaltung::init( )
 {
-    new Raumverwaltung raume;
+    Raumverwaltung raume;
     raume.readRoomConfig();
 }
 

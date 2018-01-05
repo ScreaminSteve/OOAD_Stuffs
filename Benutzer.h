@@ -10,6 +10,9 @@ using namespace std;
 
 class Benutzer {
 public:
+    
+    Benutzer();
+    Benutzer(string, string, int);
 
     bool IsAdmin() const {
         return isAdmin;
@@ -23,8 +26,12 @@ public:
         return passwort;
     }
 
-    void SetAdmin(bool Admin) {
-        isAdmin = Admin;
+    void SetAdmin(int admin) {
+        if(admin == 1){
+            isAdmin = true;
+        } else {
+            isAdmin = false;
+        }
     }
 
     void SetName(string name) {
@@ -39,6 +46,8 @@ private:
     string name;
     string passwort;
     bool isAdmin;
+    
+    
 };
 
 #endif

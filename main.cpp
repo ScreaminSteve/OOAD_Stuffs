@@ -14,11 +14,15 @@
 #include <iostream>
 using namespace std;
 
+#include "CUI.h"
 
 int main(int argc, char** argv) {
-    new CUI console;
-    console.init();
+    CUI console;
     
+    console.init();
+    console.login();
+    
+   
 
     return 0;
 }

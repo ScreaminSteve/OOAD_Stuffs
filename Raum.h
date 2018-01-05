@@ -10,10 +10,15 @@ public:
     Raum();
     explicit Raum(int,int,int);
     ~Raum();
-private:
+    
+    /*Hendrik -> Habe ich als public daten, weil ich von RaumVerwaltung sonst
+     * nur fehlermeldungen kriege, da diese var's private sind und ich von
+     * dort keinene zugriff habe*/
     int nummer;
     int plaetze;
     int gebaeude;
+private:
+    
 };
 
 #endif

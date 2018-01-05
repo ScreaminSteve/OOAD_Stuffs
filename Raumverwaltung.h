@@ -8,7 +8,9 @@
 #include "Raum.h"
 #include <vector>
 #include <fstream>
+#include <iostream>
 using namespace std;
+
 class Raumverwaltung
 {
 	

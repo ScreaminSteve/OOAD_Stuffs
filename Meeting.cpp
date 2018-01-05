@@ -29,12 +29,12 @@ void Meeting::createNewMeeting( )
 	
 }
 
-void Meeting::setTime( DATETIME time )
+void Meeting::setTime( int hour, int minute )
 {
 	
 }
 
-void Meeting::setEquipment( std::vector<boolean> EuipList )
+void Meeting::setEquipment( std::vector<bool> equipList )
 {
 	
 }
