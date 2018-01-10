@@ -6,6 +6,10 @@
 #define EQUIPMENT_H_H
 
 #include <vector>
+<<<<<<< HEAD
+=======
+
+>>>>>>> Hendrik
 class Equipment
 {
 	std::vector<bool> stuffs;

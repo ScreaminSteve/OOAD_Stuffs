@@ -7,11 +7,14 @@
 
 #include <string>
 #include <vector>
+<<<<<<< HEAD
+=======
+
+>>>>>>> Hendrik
 class Einladung
 {
 	std::vector<std::string> namelist;
-	
-	
+		
 };
 
 #endif

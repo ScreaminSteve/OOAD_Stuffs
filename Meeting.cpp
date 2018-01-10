@@ -29,12 +29,20 @@ void Meeting::createNewMeeting( )
 	
 }
 
+<<<<<<< HEAD
 void Meeting::setTime( int time )
+=======
+void Meeting::setTime( int hour, int minute )
+>>>>>>> Hendrik
 {
 	
 }
 
+<<<<<<< HEAD
 void Meeting::setEquipment( std::vector<bool> EuipList )
+=======
+void Meeting::setEquipment( std::vector<bool> equipList )
+>>>>>>> Hendrik
 {
 	
 }

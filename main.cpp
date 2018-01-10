@@ -15,11 +15,18 @@
 #include "CUI.h"
 using namespace std;
 
+#include "CUI.h"
 
 int main(int argc, char** argv) {
     CUI console;
-    console.init();
+<<<<<<< HEAD
+=======
     
+>>>>>>> Hendrik
+    console.init();
+    console.login();
+    
+   
 
     return 0;
 }
