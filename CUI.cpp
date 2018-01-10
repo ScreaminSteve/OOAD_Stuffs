@@ -4,6 +4,7 @@
 
 
 #include "CUI.h"
+#include "Benutzerverwaltung.h"
 
 CUI::CUI() {
 }
@@ -29,8 +30,10 @@ void CUI::InputDuration() {
 }
 
 void CUI::init() {
-    new MeetingVerwaltung verwaltung;
+    new MeetingVerwaltung Mverwaltung;
     verwaltung.init();
+    new Benutzerverwaltung Bverwaltung;
+    Bverwaltung.init();
 }
 
 void CUI::toggleLogin() {

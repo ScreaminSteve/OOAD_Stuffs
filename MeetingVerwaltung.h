@@ -24,8 +24,7 @@ public:
 	void showRooms( );
 	
 private:
-	Meeting * meeting;
-	
+	Meeting * meeting
 	Raumverwaltung * raumverwaltung;
 	
 	
