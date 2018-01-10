@@ -47,6 +47,7 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>Makefile</itemPath>
   </logicalFolder>
   <sourceRootList>
     <Elem>.</Elem>
@@ -57,11 +58,13 @@
       <toolsSet>
         <compilerSet>default</compilerSet>
         <dependencyChecking>true</dependencyChecking>
-        <rebuildPropChanged>false</rebuildPropChanged>
+        <rebuildPropChanged>true</rebuildPropChanged>
       </toolsSet>
       <compileType>
         <ccTool>
           <standard>8</standard>
+          <commandLine>-pedantic</commandLine>
+          <warningLevel>2</warningLevel>
         </ccTool>
       </compileType>
       <item path="Benutzer.cpp" ex="false" tool="1" flavor2="0">
@@ -88,6 +91,8 @@
       </item>
       <item path="Equipment.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Makefile" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Meeting.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Meeting.h" ex="false" tool="3" flavor2="0">
@@ -106,7 +111,7 @@
       </item>
       <item path="Raumverwaltung.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="Raumverwaltung.h" ex="false" tool="3" flavor2="0">
+      <item path="Raumverwaltung.h" ex="false" tool="1" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -155,6 +160,8 @@
       <item path="Equipment.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Equipment.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Makefile" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Meeting.cpp" ex="false" tool="1" flavor2="0">
       </item>

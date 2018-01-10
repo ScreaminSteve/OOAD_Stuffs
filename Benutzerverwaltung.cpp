@@ -12,7 +12,6 @@
  */
 
 #include "Benutzerverwaltung.h"
-#include "Benutzer.h"
 
 Benutzerverwaltung::Benutzerverwaltung() {
 }
@@ -29,8 +28,11 @@ void Benutzerverwaltung::readUserFile() {
     bool isAdminist;
     while (!userList.eof()) {
         userList >> Name >> password>>isAdminist;
-        new Benutzer{Name, password, isAdminist};
-        AvailableUsers.push_back(Name, password, isAdminist);
+        AvailableUsers.push_back(new Benutzer{Name, password, isAdminist});
     }
 
+}
+
+void Benutzerverwaltung::init(){
+    this->readUserFile();
 }

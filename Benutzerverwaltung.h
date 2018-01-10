@@ -17,6 +17,7 @@
 #include <vector>
 #include <fstream>
 #include <string>
+#include "Benutzer.h"
 using namespace std;
 
 class Benutzerverwaltung {
@@ -25,8 +26,9 @@ public:
     Benutzerverwaltung(const Benutzerverwaltung& orig);
     virtual ~Benutzerverwaltung();
     void readUserFile();
+    void init();
 private:
-    vector <Benutzer> AvailableUsers;
+    vector <Benutzer*> AvailableUsers;
 };
 
 #endif /* BENUTZERVERWALTUNG_H */

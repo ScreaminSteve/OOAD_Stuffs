@@ -12,11 +12,12 @@
  */
 
 #include <iostream>
+#include "CUI.h"
 using namespace std;
 
 
 int main(int argc, char** argv) {
-    new CUI console;
+    CUI console;
     console.init();
     
 

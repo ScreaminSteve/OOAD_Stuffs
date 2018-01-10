@@ -30,9 +30,9 @@ void CUI::InputDuration() {
 }
 
 void CUI::init() {
-    new MeetingVerwaltung Mverwaltung;
-    verwaltung.init();
-    new Benutzerverwaltung Bverwaltung;
+    MeetingVerwaltung Mverwaltung;
+    Mverwaltung.init();
+    Benutzerverwaltung Bverwaltung;
     Bverwaltung.init();
 }
 

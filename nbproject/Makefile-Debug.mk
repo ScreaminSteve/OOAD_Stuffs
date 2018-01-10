@@ -53,8 +53,8 @@ OBJECTFILES= \
 CFLAGS=
 
 # CC Compiler Flags
-CCFLAGS=
-CXXFLAGS=
+CCFLAGS=-pedantic
+CXXFLAGS=-pedantic
 
 # Fortran Compiler Flags
 FFLAGS=
@@ -73,65 +73,70 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ooad_stuffs.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ooad_stuffs ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/Benutzer.o: Benutzer.cpp
+${OBJECTDIR}/Benutzer.o: Benutzer.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Benutzer.o Benutzer.cpp
+	$(COMPILE.cc) -g -Wall -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Benutzer.o Benutzer.cpp
 
-${OBJECTDIR}/Benutzerverwaltung.o: Benutzerverwaltung.cpp
+${OBJECTDIR}/Benutzerverwaltung.o: Benutzerverwaltung.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Benutzerverwaltung.o Benutzerverwaltung.cpp
+	$(COMPILE.cc) -g -Wall -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Benutzerverwaltung.o Benutzerverwaltung.cpp
 
-${OBJECTDIR}/CUI.o: CUI.cpp
+${OBJECTDIR}/CUI.o: CUI.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CUI.o CUI.cpp
+	$(COMPILE.cc) -g -Wall -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CUI.o CUI.cpp
 
-${OBJECTDIR}/Catering.o: Catering.cpp
+${OBJECTDIR}/Catering.o: Catering.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Catering.o Catering.cpp
+	$(COMPILE.cc) -g -Wall -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Catering.o Catering.cpp
 
-${OBJECTDIR}/Einladung.o: Einladung.cpp
+${OBJECTDIR}/Einladung.o: Einladung.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Einladung.o Einladung.cpp
+	$(COMPILE.cc) -g -Wall -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Einladung.o Einladung.cpp
 
-${OBJECTDIR}/Equipment.o: Equipment.cpp
+${OBJECTDIR}/Equipment.o: Equipment.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Equipment.o Equipment.cpp
+	$(COMPILE.cc) -g -Wall -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Equipment.o Equipment.cpp
 
-${OBJECTDIR}/Meeting.o: Meeting.cpp
+${OBJECTDIR}/Meeting.o: Meeting.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Meeting.o Meeting.cpp
+	$(COMPILE.cc) -g -Wall -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Meeting.o Meeting.cpp
 
-${OBJECTDIR}/MeetingVerwaltung.o: MeetingVerwaltung.cpp
+${OBJECTDIR}/MeetingVerwaltung.o: MeetingVerwaltung.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MeetingVerwaltung.o MeetingVerwaltung.cpp
+	$(COMPILE.cc) -g -Wall -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MeetingVerwaltung.o MeetingVerwaltung.cpp
 
-${OBJECTDIR}/Mitarbeiter.o: Mitarbeiter.cpp
+${OBJECTDIR}/Mitarbeiter.o: Mitarbeiter.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Mitarbeiter.o Mitarbeiter.cpp
+	$(COMPILE.cc) -g -Wall -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Mitarbeiter.o Mitarbeiter.cpp
 
-${OBJECTDIR}/Raum.o: Raum.cpp
+${OBJECTDIR}/Raum.o: Raum.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Raum.o Raum.cpp
+	$(COMPILE.cc) -g -Wall -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Raum.o Raum.cpp
 
-${OBJECTDIR}/Raumverwaltung.o: Raumverwaltung.cpp
+${OBJECTDIR}/Raumverwaltung.o: Raumverwaltung.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Raumverwaltung.o Raumverwaltung.cpp
+	$(COMPILE.cc) -g -Wall -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Raumverwaltung.o Raumverwaltung.cpp
 
-${OBJECTDIR}/main.o: main.cpp
+${OBJECTDIR}/Raumverwaltung.h.gch: Raumverwaltung.h nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -Wall -std=c++11 -MMD -MP -MF "$@.d" -o "$@" Raumverwaltung.h
+
+${OBJECTDIR}/main.o: main.cpp nbproject/Makefile-${CND_CONF}.mk
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Wall -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 # Subprojects
 .build-subprojects:

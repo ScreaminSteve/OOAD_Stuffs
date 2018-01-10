@@ -10,7 +10,7 @@ using namespace std;
 
 class Benutzer {
 public:
-
+    Benutzer(string,string,bool);
     bool IsAdmin() const {
         return isAdmin;
     }
