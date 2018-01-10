@@ -8,6 +8,14 @@
 #include "MeetingVerwaltung.h"
 #include "Benutzer.h"
 
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <vector>
+#include <exception>
+
+using namespace std;
+
 class CUI {
 public:
     CUI();
@@ -20,16 +28,21 @@ public:
     void inputRoom();
     void InputTime();
     void showMenu();
-    void toggleLogin();
+    bool checkUserList(string, string);
+    void login();
+    void logout();
 
 private:
-    Benutzer * benutzer;
+    Benutzer* benutzer;
 
     MeetingVerwaltung* meetingverwaltung;
 
-    Benutzer * Mitarbeiter;
-
-
+    Benutzer* Mitarbeiter;
+    
+    bool isLoggedIn = false;
+    
+    vector<Benutzer*> user;
+    
 };
 
 #endif

@@ -13,7 +13,8 @@ Raumverwaltung::Raumverwaltung() {
 }
 
 void Raumverwaltung::readRoomConfig() {
-    ifstream roomconf("raumliste.conf");
+    ifstream roomconf;
+    roomconf.open("raumliste.conf");
     int geb, nummer, platze;
     while (!roomconf.eof()) {
         roomconf >> geb >> nummer >> platze;

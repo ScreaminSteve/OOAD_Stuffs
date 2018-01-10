@@ -36,7 +36,6 @@ void CUI::init() {
     Bverwaltung.init();
 }
 
-void CUI::toggleLogin() {
 
 }
 

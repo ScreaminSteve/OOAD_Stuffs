@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## -*- Makefile -*-
 ##
 ## User: Steve

@@ -23,8 +23,12 @@ public:
         return passwort;
     }
 
-    void SetAdmin(bool Admin) {
-        isAdmin = Admin;
+    void SetAdmin(int admin) {
+        if(admin == 1){
+            isAdmin = true;
+        } else {
+            isAdmin = false;
+        }
     }
 
     void SetName(string name) {
