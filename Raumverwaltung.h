@@ -13,10 +13,11 @@ class Raumverwaltung
 {
 	
 public:
+    Raumverwaltung();
 	void addRoom( );            //ADMIN: neue Räume zu Liste hinzufügen
 	void readRoomConfig( );     //InitialisierungsFunktion
 	void setRoom( );            //Set Room Availability to false (Raum buchen)
-private:
+//private:
 	vector<Raum*> raumvect;
 	
 	

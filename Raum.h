@@ -10,7 +10,7 @@ public:
     Raum();
     explicit Raum(int,int,int);
     ~Raum();
-private:
+//private:
     int nummer;
     int plaetze;
     int gebaeude;
