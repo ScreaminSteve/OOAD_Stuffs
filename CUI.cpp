@@ -4,7 +4,6 @@
 
 
 #include "CUI.h"
-#include "Benutzerverwaltung.h"
 
 CUI::CUI() {
     if(isLoggedIn == false){
@@ -33,12 +32,7 @@ void CUI::InputDuration() {
 }
 
 void CUI::init() {
-<<<<<<< HEAD
-    MeetingVerwaltung Mverwaltung;
-    Mverwaltung.init();
-    Benutzerverwaltung Bverwaltung;
-    Bverwaltung.init();
-=======
+
     MeetingVerwaltung verwaltung;
     verwaltung.init();
     

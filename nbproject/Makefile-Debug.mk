@@ -21,8 +21,8 @@ FC=gfortran
 AS=as
 
 # Macros
-CND_PLATFORM=GNU-MacOSX
-CND_DLIB_EXT=dylib
+CND_PLATFORM=Cygwin-Windows
+CND_DLIB_EXT=dll
 CND_CONF=Debug
 CND_DISTDIR=dist
 CND_BUILDDIR=build
@@ -36,7 +36,6 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/Benutzer.o \
-	${OBJECTDIR}/Benutzerverwaltung.o \
 	${OBJECTDIR}/CUI.o \
 	${OBJECTDIR}/Catering.o \
 	${OBJECTDIR}/Einladung.o \
@@ -67,9 +66,9 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ooad_stuffs
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ooad_stuffs.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ooad_stuffs: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ooad_stuffs.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ooad_stuffs ${OBJECTFILES} ${LDLIBSOPTIONS}
 
@@ -77,11 +76,6 @@ ${OBJECTDIR}/Benutzer.o: Benutzer.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -Wall -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Benutzer.o Benutzer.cpp
-
-${OBJECTDIR}/Benutzerverwaltung.o: Benutzerverwaltung.cpp nbproject/Makefile-${CND_CONF}.mk
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -Wall -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Benutzerverwaltung.o Benutzerverwaltung.cpp
 
 ${OBJECTDIR}/CUI.o: CUI.cpp nbproject/Makefile-${CND_CONF}.mk
 	${MKDIR} -p ${OBJECTDIR}

@@ -36,7 +36,6 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/Benutzer.o \
-	${OBJECTDIR}/Benutzerverwaltung.o \
 	${OBJECTDIR}/CUI.o \
 	${OBJECTDIR}/Catering.o \
 	${OBJECTDIR}/Einladung.o \
@@ -77,11 +76,6 @@ ${OBJECTDIR}/Benutzer.o: Benutzer.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Benutzer.o Benutzer.cpp
-
-${OBJECTDIR}/Benutzerverwaltung.o: Benutzerverwaltung.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Benutzerverwaltung.o Benutzerverwaltung.cpp
 
 ${OBJECTDIR}/CUI.o: CUI.cpp
 	${MKDIR} -p ${OBJECTDIR}

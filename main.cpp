@@ -19,10 +19,6 @@ using namespace std;
 
 int main(int argc, char** argv) {
     CUI console;
-<<<<<<< HEAD
-=======
-    
->>>>>>> Hendrik
     console.init();
     console.login();
     
