@@ -31,7 +31,9 @@
 *.out
 *.app
 
-# Makefiles
+# Stuffs
+
+*.stackdump
 
 *Makefile*
 /build/

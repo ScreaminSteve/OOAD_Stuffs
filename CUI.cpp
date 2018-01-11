@@ -37,14 +37,14 @@ void CUI::init() {
     verwaltung.init();
     
     //Login Info txt einlesen und Benutzer::Benutzer erstellen
-    ifstream userList;
-    userList.open("logininfo.conf");
+    ifstream userList("logininfo.conf");
     string name, pw;
     int isAdmin;
     
-    while(!userList.eof()){
+    if (!userList) 
+    while(!(userList.eof())){
         userList >> name >> pw >> isAdmin;
-        user.push_back(new Benutzer(name, pw, isAdmin));
+        user.push_back(new Benutzer{name, pw, isAdmin});
     }
 }
 

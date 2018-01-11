@@ -17,7 +17,7 @@ using namespace std;
 
 #include "CUI.h"
 
-int main(int argc, char** argv) {
+int main(int argc, char** argv) try{
     CUI console;
     console.init();
     console.login();
@@ -25,5 +25,11 @@ int main(int argc, char** argv) {
    
 
     return 0;
+}catch (const std::exception& e) {
+    std::cerr << e.what();
+    return -2;
+} catch (...) {
+    std::cerr << "an error";
+    return -1;
 }
 
