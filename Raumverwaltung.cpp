@@ -14,7 +14,7 @@ Raumverwaltung::Raumverwaltung() {
 
 void Raumverwaltung::readRoomConfig() {
     ifstream roomconf;
-    roomconf.open("raumliste.conf",ios::in);
+    roomconf.open("raumliste.conf",std::ifstream::in);
     int geb, nummer, platze;
     if (!roomconf) throw runtime_error("Roomconfig Faulty!\n");
     while (!roomconf.eof()) {
