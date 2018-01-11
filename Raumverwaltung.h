@@ -20,6 +20,7 @@ public:
 	void readRoomConfig( );     //InitialisierungsFunktion
 	void setRoom(int,int);            //Set Room Availability to false (Raum buchen)
         void printRoomList();
+        void setRoom();
 //private:
 	vector<Raum*> raumvect;
 	

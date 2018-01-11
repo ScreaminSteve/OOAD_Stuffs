@@ -12,19 +12,8 @@ using namespace std;
 
 class MeetingVerwaltung {
 public:
-<<<<<<< HEAD
-	void init( );
-	void newMeeting( );
-	void setCatering( bool );
-	void setDuration( int );
-	void setEquipment( std::vector<bool>);
-	void setRoom( int, int );
-	void setTheme(string );
-	void setTime( int );
-	void showRooms( );
-	
-=======
-    MeetingVerwaltung();
+
+    MeetingVerwaltung(){};
     void init();
     void newMeeting();
     void setCatering(bool isCater);
@@ -36,7 +25,6 @@ public:
     void showRooms();
     Meeting * meeting;
     Raumverwaltung * raumverwaltung;
->>>>>>> da9bb00c7d2c388099d8ebc795865cc266dce5ca
 private:
     //habs aus den gleichen gründen wie du public gemacht
 

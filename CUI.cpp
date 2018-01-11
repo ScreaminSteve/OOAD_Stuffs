@@ -14,12 +14,7 @@ CUI::~CUI() {
 }
 
 void CUI::init() {
-<<<<<<< HEAD
-    
-=======
-
     MeetingVerwaltung verwaltung;
->>>>>>> da9bb00c7d2c388099d8ebc795865cc266dce5ca
     verwaltung.init();
 
     //Login Info txt einlesen und Benutzer::Benutzer erstellen
@@ -51,11 +46,7 @@ bool CUI::checkUserList(string name, string pw) {
 
 void CUI::login() {
 
-<<<<<<< HEAD
-    /*
-=======
->>>>>>> da9bb00c7d2c388099d8ebc795865cc266dce5ca
-    cout << "Vector unload" << endl;
+    /*cout << "Vector unload" << endl;
     for (int i = 0; i < user.size(); i++) {
         cout << "name: " << user.at(i)->GetName();
         cout << endl << "pw: " << user.at(i)->GetPasswort();
@@ -63,10 +54,7 @@ void CUI::login() {
         cout << endl;
     }
     cout << endl << endl;
-<<<<<<< HEAD
      */
-=======
->>>>>>> da9bb00c7d2c388099d8ebc795865cc266dce5ca
 
     string username{};
     string password{};
@@ -101,12 +89,8 @@ void CUI::login() {
 }
 
 void CUI::logout() {
-<<<<<<< HEAD
     cout << endl << "Logged Out." << endl;
     login();
-=======
-    terminate();
->>>>>>> da9bb00c7d2c388099d8ebc795865cc266dce5ca
 }
 
 void CUI::showMenu() {
@@ -133,28 +117,28 @@ void CUI::showMenu() {
     //Menu Input successfull
     switch (menuInput) {
         case 1:
-            createMeeting();    //Neues Meeting anlegen
+            createMeeting(); //Neues Meeting anlegen
             break;
         case 2:
-            inputTime();        //Setzt neue Zeit für Meeting
+            inputTime(); //Setzt neue Zeit für Meeting
             break;
         case 3:
-            inputDuration();    //Setzt neue Zeit für Meeting
+            inputDuration(); //Setzt neue Zeit für Meeting
             break;
         case 4:
-            inputRoom();        //Setzt neue Zeit für Meeting
+            inputRoom(); //Setzt neue Zeit für Meeting
             break;
         case 5:
             //Soll das gesamte Meeting löschen, idk wie aber (oder soll es alles einfach auf "0" setzen zb?)
             break;
         case 6:
-            inputEquipment();   //Setzt equipment
+            inputEquipment(); //Setzt equipment
             break;
         case 7:
-            inputCatering();    //Setzt catering
+            inputCatering(); //Setzt catering
             break;
         case 8:
-            logout();           //Logged user aus
+            logout(); //Logged user aus
             break;
         default:
             cout << "Invalid input. Try again";
@@ -164,8 +148,6 @@ void CUI::showMenu() {
 }
 
 void CUI::createMeeting() {
-<<<<<<< HEAD
-   
 }
 
 void CUI::inputCatering() {
@@ -175,46 +157,22 @@ void CUI::inputCatering() {
     if (!(cin >> cateringInput)) {
         throw runtime_error("Invalid Input");
     }
-    
-    if(cateringInput == "y"){
+
+    if (cateringInput == "y") {
         needsCatering = true;
-    }
-    else if(cateringInput == "n"){
+    } else if (cateringInput == "n") {
+        needsCatering = false;
+    } else {
         needsCatering = false;
     }
-    else{
-        needsCatering = false;
-    }
-    
+
     verwaltung.setCatering(needsCatering);
-=======
-    string theme;
-    int hours,minutes,dauer,geb,number;
-    bool cater;
-    vector<bool> equiplist;
-    
-    cout<<"Eingabe des Namens: ";
-    cin>>theme;
-    cout<<"Eingabe Uhrzeit (getrennt in Stunden und Minuten): ";
-    cin>>hours,minutes;
-        if(hours>24) hours=0;
-        if(minutes>60) minutes=0;
-    cout<<"Eingabe der Dauer in Minuten: ";
-    cin>>dauer;
-    meetingverwaltung->raumverwaltung->printRoomList();
-    
-    meetingverwaltung->meeting->setTheme(theme);
-    meetingverwaltung->meeting->setTime(hours,minutes);
-    meetingverwaltung->meeting->setDuration(dauer);
-    meetingverwaltung->raumverwaltung->setRoom(geb,number);
-    meetingverwaltung->meeting->setCatering();
-    meetingverwaltung->meeting->setEquipment();
->>>>>>> da9bb00c7d2c388099d8ebc795865cc266dce5ca
+
 }
 
 void CUI::inputRoom() {
     int building{}, number{};
-    
+
     cout << endl << "In which Building will the meeting be taking place?" << endl;
     if (!(cin >> building)) {
         throw runtime_error("Invalid Input");
@@ -223,7 +181,7 @@ void CUI::inputRoom() {
     if (!(cin >> number)) {
         throw runtime_error("Invalid Input");
     }
-    
+
     verwaltung.setRoom(building, number);
 }
 
@@ -232,7 +190,7 @@ void CUI::inputEquipment() {
     cout << endl << "Fill out the list of equipment that you need for the meeting. \nInput y = yes, n = no" << endl;
     //Lass ich als Strings eingeben um einheitliche eingaben zu haben
     string beamer{}, flipchart{}, extraTischeStuehle{};
-    
+
     cout << endl << "Brauchen Sie einen Beamer?: ";
     if (!(cin >> beamer)) {
         throw runtime_error("Invalid Input");
@@ -245,46 +203,46 @@ void CUI::inputEquipment() {
     if (!(cin >> extraTischeStuehle)) {
         throw runtime_error("Invalid Input");
     }
-        
+
     //Strings zu bool konvertieren
-    if(beamer == "y"){
+    if (beamer == "y") {
         inputEquip.push_back(true);
     }
-    if(beamer == "n" || beamer != "y"){
+    if (beamer == "n" || beamer != "y") {
         inputEquip.push_back(false);
     }
-    if(flipchart == "y"){
+    if (flipchart == "y") {
         inputEquip.push_back(true);
     }
-    if(flipchart == "n" || flipchart != "y"){
+    if (flipchart == "n" || flipchart != "y") {
         inputEquip.push_back(false);
     }
-    if(extraTischeStuehle == "y"){
+    if (extraTischeStuehle == "y") {
         inputEquip.push_back(true);
     }
-    if(extraTischeStuehle == "n" || extraTischeStuehle != "y"){
+    if (extraTischeStuehle == "n" || extraTischeStuehle != "y") {
         inputEquip.push_back(false);
     }
-    
+
     verwaltung.setEquipment(inputEquip);
 }
 
 void CUI::inputTime() {
     cout << endl << "At what time will the meeting be taking place?" << endl;
     int time{};
-    if(!(cin >> time)){
+    if (!(cin >> time)) {
         throw runtime_error("Invalid Input");
     }
-    
+
     verwaltung.setTime(time);
 }
 
 void CUI::inputDuration() {
     cout << endl << "How long will the meeting last?" << endl;
     int duration{};
-    if(!(cin >> duration)){
+    if (!(cin >> duration)) {
         throw runtime_error("Invalid Input");
     }
-    
+
     verwaltung.setDuration(duration);
 }
