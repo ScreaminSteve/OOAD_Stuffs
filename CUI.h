@@ -31,18 +31,16 @@ public:
     bool checkUserList(string, string);
     void login();
     void logout();
-
+    MeetingVerwaltung* meetingverwaltung;
 private:
     Benutzer* benutzer;
 
-    MeetingVerwaltung* meetingverwaltung;
-
     Benutzer* Mitarbeiter;
-    
+
     bool isLoggedIn = false;
-    
+
     vector<Benutzer*> user;
-    
+
 };
 
 #endif

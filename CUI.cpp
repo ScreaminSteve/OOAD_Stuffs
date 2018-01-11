@@ -33,73 +33,74 @@ void CUI::init() {
 
     MeetingVerwaltung verwaltung;
     verwaltung.init();
-    
+
     //Login Info txt einlesen und Benutzer::Benutzer erstellen
     ifstream userList("logininfo.conf");
     string name, pw;
     int isAdmin;
-    cout<<"begin reading"<<endl;
+    cout << "begin reading" << endl;
     if (!userList) throw runtime_error("Faulty Userconfig");
-    while(!(userList.eof())){
+    while (!(userList.eof())) {
         userList >> name >> pw >> isAdmin;
         user.push_back(new Benutzer{name, pw, isAdmin});
-        cout<<"user read"<<endl;
+        cout << "user read" << endl;
     }
-    cout<<"stuffs read";
+    cout << "stuffs read";
 }
 
 //überprüft gültigkeit des eingegebenen username/pw
-bool CUI::checkUserList(string name, string pw){
-    
-    for(int i = 0; i < user.size(); i++){
-        if(user.at(i)->GetName() == name && user.at(i)->GetPasswort() == pw){
+
+bool CUI::checkUserList(string name, string pw) {
+
+    for (int i = 0; i < user.size(); i++) {
+        if (user.at(i)->GetName() == name && user.at(i)->GetPasswort() == pw) {
             return true;
         }
     }
     return false;
-    
+
 }
 
 void CUI::login() {
-    
+
     cout << "Vector unload" << endl;
-    for(int i = 0; i < user.size(); i++){
+    for (int i = 0; i < user.size(); i++) {
         cout << "name: " << user.at(i)->GetName();
         cout << endl << "pw: " << user.at(i)->GetPasswort();
         cout << endl << "isadmin: " << user.at(i)->IsAdmin();
         cout << endl;
     }
     cout << endl << endl;
-    
+
     string username{};
     string password{};
-    
+
     //Eingabe aufforderung
     cout << "Login (q to quit)" << endl << "Username: ";
-    if(!(cin >> username)){
+    if (!(cin >> username)) {
         throw runtime_error("Ending Program.");
     }
-    
-    if(username == "q"){
+
+    if (username == "q") {
         cout << endl << "Ending Program." << endl;
         terminate();
     }
-    
+
     cout << endl << "Password: ";
-    if(!(cin >> password)){
+    if (!(cin >> password)) {
         throw runtime_error("Invalid Password Input");
     }
-    
+
     bool isUser = checkUserList(username, password);
-    
-    if(isUser == false){
+
+    if (isUser == false) {
         cout << endl << "Invalid Username or Password" << endl;
         login();
     }
 
 }
 
-void CUI::logout(){
+void CUI::logout() {
     terminate();
 }
 
@@ -108,7 +109,27 @@ void CUI::showMenu() {
 }
 
 void CUI::createMeeting() {
-
+    string theme;
+    int hours,minutes,dauer,geb,number;
+    bool cater;
+    vector<bool> equiplist;
+    
+    cout<<"Eingabe des Namens: ";
+    cin>>theme;
+    cout<<"Eingabe Uhrzeit (getrennt in Stunden und Minuten): ";
+    cin>>hours,minutes;
+        if(hours>24) hours=0;
+        if(minutes>60) minutes=0;
+    cout<<"Eingabe der Dauer in Minuten: ";
+    cin>>dauer;
+    meetingverwaltung->raumverwaltung->printRoomList();
+    
+    meetingverwaltung->meeting->setTheme(theme);
+    meetingverwaltung->meeting->setTime(hours,minutes);
+    meetingverwaltung->meeting->setDuration(dauer);
+    meetingverwaltung->raumverwaltung->setRoom(geb,number);
+    meetingverwaltung->meeting->setCatering();
+    meetingverwaltung->meeting->setEquipment();
 }
 
 void CUI::InputCatering() {

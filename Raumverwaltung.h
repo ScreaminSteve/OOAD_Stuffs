@@ -18,7 +18,8 @@ public:
     Raumverwaltung();
 	void addRoom( );            //ADMIN: neue Räume zu Liste hinzufügen
 	void readRoomConfig( );     //InitialisierungsFunktion
-	void setRoom( );            //Set Room Availability to false (Raum buchen)
+	void setRoom(int,int);            //Set Room Availability to false (Raum buchen)
+        void printRoomList();
 //private:
 	vector<Raum*> raumvect;
 	
