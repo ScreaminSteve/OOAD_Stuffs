@@ -26,8 +26,6 @@ public:
 private:
 	Meeting * meeting;
 	Raumverwaltung * raumverwaltung;
-	
-	
 };
 
 #endif

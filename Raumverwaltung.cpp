@@ -23,9 +23,10 @@ void Raumverwaltung::readRoomConfig() {
         raumvect.push_back(temp);
      
     }
-    for (int i = 0; i < raumvect.size(); i++) {
-        cout << raumvect.at(i)->nummer << " " << raumvect.at(i)->plaetze << " " << raumvect.at(i)->gebaeude;
-    }
+    //Raumausgabe auskommentiert
+//    for (int i = 0; i < raumvect.size(); i++) {
+//        cout << raumvect.at(i)->nummer << " " << raumvect.at(i)->plaetze << " " << raumvect.at(i)->gebaeude;
+//    }
 }
 
 void Raumverwaltung::setRoom() {
