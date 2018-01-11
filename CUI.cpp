@@ -14,7 +14,12 @@ CUI::~CUI() {
 }
 
 void CUI::init() {
+<<<<<<< HEAD
     
+=======
+
+    MeetingVerwaltung verwaltung;
+>>>>>>> da9bb00c7d2c388099d8ebc795865cc266dce5ca
     verwaltung.init();
 
     //Login Info txt einlesen und Benutzer::Benutzer erstellen
@@ -46,16 +51,22 @@ bool CUI::checkUserList(string name, string pw) {
 
 void CUI::login() {
 
+<<<<<<< HEAD
     /*
+=======
+>>>>>>> da9bb00c7d2c388099d8ebc795865cc266dce5ca
     cout << "Vector unload" << endl;
-    for(int i = 0; i < user.size(); i++){
+    for (int i = 0; i < user.size(); i++) {
         cout << "name: " << user.at(i)->GetName();
         cout << endl << "pw: " << user.at(i)->GetPasswort();
         cout << endl << "isadmin: " << user.at(i)->IsAdmin();
         cout << endl;
     }
     cout << endl << endl;
+<<<<<<< HEAD
      */
+=======
+>>>>>>> da9bb00c7d2c388099d8ebc795865cc266dce5ca
 
     string username{};
     string password{};
@@ -90,8 +101,12 @@ void CUI::login() {
 }
 
 void CUI::logout() {
+<<<<<<< HEAD
     cout << endl << "Logged Out." << endl;
     login();
+=======
+    terminate();
+>>>>>>> da9bb00c7d2c388099d8ebc795865cc266dce5ca
 }
 
 void CUI::showMenu() {
@@ -149,6 +164,7 @@ void CUI::showMenu() {
 }
 
 void CUI::createMeeting() {
+<<<<<<< HEAD
    
 }
 
@@ -171,6 +187,29 @@ void CUI::inputCatering() {
     }
     
     verwaltung.setCatering(needsCatering);
+=======
+    string theme;
+    int hours,minutes,dauer,geb,number;
+    bool cater;
+    vector<bool> equiplist;
+    
+    cout<<"Eingabe des Namens: ";
+    cin>>theme;
+    cout<<"Eingabe Uhrzeit (getrennt in Stunden und Minuten): ";
+    cin>>hours,minutes;
+        if(hours>24) hours=0;
+        if(minutes>60) minutes=0;
+    cout<<"Eingabe der Dauer in Minuten: ";
+    cin>>dauer;
+    meetingverwaltung->raumverwaltung->printRoomList();
+    
+    meetingverwaltung->meeting->setTheme(theme);
+    meetingverwaltung->meeting->setTime(hours,minutes);
+    meetingverwaltung->meeting->setDuration(dauer);
+    meetingverwaltung->raumverwaltung->setRoom(geb,number);
+    meetingverwaltung->meeting->setCatering();
+    meetingverwaltung->meeting->setEquipment();
+>>>>>>> da9bb00c7d2c388099d8ebc795865cc266dce5ca
 }
 
 void CUI::inputRoom() {

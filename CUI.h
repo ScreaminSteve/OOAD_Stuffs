@@ -31,21 +31,23 @@ public:
     bool checkUserList(string, string);
     void login();
     void logout();
-
+    MeetingVerwaltung* meetingverwaltung;
 private:
     Benutzer* benutzer;
 
-    MeetingVerwaltung* meetingverwaltung;
-
     Benutzer* Mitarbeiter;
-    
+
     bool isLoggedIn = false;
-    
+
     vector<Benutzer*> user;
+<<<<<<< HEAD
     
     //für zugriff auf MeetingVerwaltung von allen funktionen in 
     MeetingVerwaltung verwaltung;
     
+=======
+
+>>>>>>> da9bb00c7d2c388099d8ebc795865cc266dce5ca
 };
 
 #endif

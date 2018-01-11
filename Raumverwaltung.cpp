@@ -14,20 +14,28 @@ Raumverwaltung::Raumverwaltung() {
 
 void Raumverwaltung::readRoomConfig() {
     ifstream roomconf;
-    roomconf.open("raumliste.conf",std::ifstream::in);
+    roomconf.open("raumliste.conf", std::ifstream::in);
     int geb, nummer, platze;
     if (!roomconf) throw runtime_error("Roomconfig Faulty!\n");
     while (!roomconf.eof()) {
         roomconf >> geb >> nummer >> platze;
         Raum* temp = new Raum(nummer, platze, geb);
         raumvect.push_back(temp);
+<<<<<<< HEAD
      
     }
     for (int i = 0; i < raumvect.size(); i++) {
         //cout << raumvect.at(i)->nummer << " "
         //<< raumvect.at(i)->plaetze << " "
         //<< raumvect.at(i)->gebaeude;
+=======
+
+>>>>>>> da9bb00c7d2c388099d8ebc795865cc266dce5ca
     }
+    //Raumausgabe auskommentiert
+    //    for (int i = 0; i < raumvect.size(); i++) {
+    //        cout << raumvect.at(i)->nummer << " " << raumvect.at(i)->plaetze << " " << raumvect.at(i)->gebaeude;
+    //    }
 }
 
 void Raumverwaltung::setRoom() {
@@ -37,3 +45,12 @@ void Raumverwaltung::setRoom() {
 void Raumverwaltung::addRoom() {
 
 }
+
+void Raumverwaltung::printRoomList() {
+    for (int i = 0; i < raumvect.size(); i++) {
+        cout << "Gebaeudenummer: " << raumvect.at(i)->gebaeude << endl;
+        cout << "Raumnummer: " << raumvect.at(i)->nummer << endl;
+        cout << "Platzanzahl: " << raumvect.at(i)->plaetze << endl<<endl;
+    }
+}
+
