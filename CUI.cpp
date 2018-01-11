@@ -6,9 +6,7 @@
 #include "CUI.h"
 
 CUI::CUI() {
-    if(isLoggedIn == false){
-        login();
-    }
+    //yo, WTF sollte das Login im Konstruktor? dadurch kannst du dich nicht anmelden, einfach weil noch nichts geladen wurde!
 }
 
 CUI::~CUI() {
@@ -40,12 +38,14 @@ void CUI::init() {
     ifstream userList("logininfo.conf");
     string name, pw;
     int isAdmin;
-    
-    if (!userList) 
+    cout<<"begin reading"<<endl;
+    if (!userList) throw runtime_error("Faulty Userconfig");
     while(!(userList.eof())){
         userList >> name >> pw >> isAdmin;
         user.push_back(new Benutzer{name, pw, isAdmin});
+        cout<<"user read"<<endl;
     }
+    cout<<"stuffs read";
 }
 
 //überprüft gültigkeit des eingegebenen username/pw

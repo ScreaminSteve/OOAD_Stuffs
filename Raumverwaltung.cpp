@@ -14,12 +14,14 @@ Raumverwaltung::Raumverwaltung() {
 
 void Raumverwaltung::readRoomConfig() {
     ifstream roomconf;
-    roomconf.open("raumliste.conf");
+    roomconf.open("raumliste.conf",ios::in);
     int geb, nummer, platze;
+    if (!roomconf) throw runtime_error("Roomconfig Faulty!\n");
     while (!roomconf.eof()) {
         roomconf >> geb >> nummer >> platze;
         Raum* temp = new Raum(nummer, platze, geb);
         raumvect.push_back(temp);
+     
     }
     for (int i = 0; i < raumvect.size(); i++) {
         cout << raumvect.at(i)->nummer << " " << raumvect.at(i)->plaetze << " " << raumvect.at(i)->gebaeude;

@@ -13,6 +13,7 @@ public:
     Benutzer();
     Benutzer(string, string, int);
 
+    
     bool IsAdmin() const {
         return isAdmin;
     }

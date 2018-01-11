@@ -18,8 +18,11 @@ using namespace std;
 #include "CUI.h"
 
 int main(int argc, char** argv) try{
+    cout<<"CUI incoming!\n";
     CUI console;
+    cout<<"Console created"<<endl;
     console.init();
+    cout<<"Init done";
     console.login();
     
    
