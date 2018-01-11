@@ -11,23 +11,28 @@
 #include "Einladung.h"
 #include "Equipment.h"
 
+#include <iostream>
 #include <vector>
+
+using namespace std;
 
 class Meeting {
 public:
-    void createMeeting();
+    //void createMeeting();     //Wozu war das da?
     void createNewMeeting();
 
     void setCatering(bool);
     void setDuration(int);
-    void setEquipment(std::vector<bool>);
-    void setTheme(std::string theme);
+    void setEquipment(vector<bool>);
+    void setTheme(string theme);
     void setTime(int, int); //muss im design geändert werden, war vorher chrono
+    void setInvites(vector<string>);
+    void displayMeetingInfo();
 
-private:
+//private:          //Musste ich public setzen um aus CUI zugriff zu haben für die ausgabe
     Catering * catering;
 
-    //DURATION duration;
+    int meetingDuration;
 
     Einladung * einladung;
 
@@ -35,10 +40,11 @@ private:
 
     Raum room;
 
-    std::string theme;
+    string meetingTheme;
 
-    //DATETIME time;
-
+    int meetingHour, meetingMinute;
+    
+    
 
 };
 

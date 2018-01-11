@@ -27,10 +27,14 @@ public:
     void inputEquipment();
     void inputRoom();
     void inputTime();
+    void inputTheme();
+    void inviteCoWorkers();
     void showMenu();
     bool checkUserList(string, string);
     void login();
     void logout();
+    void displayMeeting();
+    
     MeetingVerwaltung* meetingverwaltung;
 private:
     Benutzer* benutzer;

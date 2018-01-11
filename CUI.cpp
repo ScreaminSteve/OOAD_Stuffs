@@ -83,29 +83,33 @@ void CUI::login() {
     }
 
     //Login successfull
+    isLoggedIn = true;
     cout << endl << "Welcome " << username << endl;
     showMenu();
 
 }
 
 void CUI::logout() {
+    isLoggedIn = false;
     cout << endl << "Logged Out." << endl;
     login();
 }
 
 void CUI::showMenu() {
-
+    cout << endl << endl << "__________________________________________" << endl << endl;
     cout << "What would you like to do next?" << endl << endl;
 
     //Menu Output
-    cout << "(1) - Create New Meeting" << endl
+    cout << "(0) - Log out" << endl
+            << "(1) - Create New Meeting" << endl
             << "(2) - Change Meeting Time" << endl
             << "(3) - Change Meeting Duration" << endl
             << "(4) - Change Meeting Room" << endl
             << "(5) - Delete Meeting" << endl
             << "(6) - Book Equipment" << endl
             << "(7) - Book Catering" << endl
-            << "(8) - Log out" << endl << endl;
+            << "(8) - Book Catering" << endl
+            << "(9) - Display Meeting Information" << endl << endl;
 
     //Menu Input
     int menuInput{};
@@ -116,6 +120,9 @@ void CUI::showMenu() {
 
     //Menu Input successfull
     switch (menuInput) {
+        case 0:
+            logout(); //Logged user aus
+            break;
         case 1:
             createMeeting(); //Neues Meeting anlegen
             break;
@@ -138,7 +145,10 @@ void CUI::showMenu() {
             inputCatering(); //Setzt catering
             break;
         case 8:
-            logout(); //Logged user aus
+            inviteCoWorkers(); //Mitarbeiter einladen
+            break;
+        case 9:
+            displayMeeting();  //Meeting Infos anzeigen
             break;
         default:
             cout << "Invalid input. Try again";
@@ -148,6 +158,22 @@ void CUI::showMenu() {
 }
 
 void CUI::createMeeting() {
+    new MeetingVerwaltung;      //Muss wahrscheinlich anders erstellt werden
+    
+    /*Call'd alles um alles ein mal durchzugehen
+     * wenn ein meeting neu erstellt wird
+     */
+    inputTheme();
+    inputTime();
+    inputDuration();
+    inputRoom();
+    inputEquipment();
+    inputCatering();
+    inviteCoWorkers();
+    
+    cout << endl << "Meeting Created and Set." << endl;
+    
+    showMenu();
 }
 
 void CUI::inputCatering() {
@@ -228,13 +254,18 @@ void CUI::inputEquipment() {
 }
 
 void CUI::inputTime() {
+    int hour{}, min{};
     cout << endl << "At what time will the meeting be taking place?" << endl;
-    int time{};
-    if (!(cin >> time)) {
+    cout << "Hour: ";
+    if (!(cin >> hour)) {
         throw runtime_error("Invalid Input");
     }
-
-    verwaltung.setTime(time);
+    cout << "\nMinute: ";
+    if (!(cin >> min)) {
+        throw runtime_error("Invalid Input");
+    }
+    
+    verwaltung.setTime(hour, min);
 }
 
 void CUI::inputDuration() {
@@ -245,4 +276,37 @@ void CUI::inputDuration() {
     }
 
     verwaltung.setDuration(duration);
+}
+
+ void CUI::inviteCoWorkers(){
+     vector<string> coWorkers;
+     
+     cout << endl << "Who else do you want to invite to the meeting?\nPress q to stop input." << endl;
+     bool continueLoop = true;
+     string coworkerName;
+     while(continueLoop == true){
+        if (!(cin >> coworkerName)) {
+            throw runtime_error("Invalid Name Input");
+        }
+        if(coworkerName == "q"){
+            continueLoop = false;
+            break;
+        } else {
+            coWorkers.push_back(coworkerName);
+        }
+     }     
+     verwaltung.setInvites(coWorkers);
+ }
+
+void CUI::inputTheme(){
+    cout << endl << "What will the meeting be about?" << endl;
+    string inputTheme{};
+    if (!(cin >> inputTheme)) {
+            throw runtime_error("Invalid Name Input");
+    }
+    verwaltung.setTheme(inputTheme);
+}
+
+void CUI::displayMeeting(){
+    verwaltung.outputInfo();
 }

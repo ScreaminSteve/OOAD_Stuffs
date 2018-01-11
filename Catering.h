@@ -7,9 +7,8 @@
 
 class Catering
 {
+    public:
 	bool hasCatering;
-	
-	
 };
 
 #endif

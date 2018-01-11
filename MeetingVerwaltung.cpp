@@ -4,10 +4,6 @@
 
 
 #include "MeetingVerwaltung.h"
-void MeetingVerwaltung::setCatering( bool isCater )
-{
-	
-}
 
 void MeetingVerwaltung::init( )
 {
@@ -15,14 +11,24 @@ void MeetingVerwaltung::init( )
     raume.readRoomConfig();
 }
 
-void MeetingVerwaltung::setTime( int time )
+void MeetingVerwaltung::newMeeting( )
 {
-	
+    //idk was ich hier machen soll töte mich am ende mache ich eh alles falsch
+}
+
+void MeetingVerwaltung::setCatering( bool isCater )
+{
+    //meeting->setCatering(isCater);
+}
+
+void MeetingVerwaltung::setTime( int hour, int minute )
+{
+    //meeting->setTime(hour, minute);
 }
 
 void MeetingVerwaltung::setRoom( int geb, int number )
 {
-	
+   //meeting brauch noch rooms oder?
 }
 
 void MeetingVerwaltung::showRooms( )
@@ -32,21 +38,24 @@ void MeetingVerwaltung::showRooms( )
 
 void MeetingVerwaltung::setTheme( string theme )
 {
-	
-}
-
-void MeetingVerwaltung::newMeeting( )
-{
-	
+    //meeting->setTheme(theme);
 }
 
 void MeetingVerwaltung::setDuration( int duration )
 {
-	
+    //meeting->setDuration(duration);
 }
 
 void MeetingVerwaltung::setEquipment( std::vector<bool> equipment )
 {
-	
+    //meeting->setEquipment(equipment);
+}
+
+void MeetingVerwaltung::setInvites(vector<string> invited){
+    //meeting->setInvites(invited);
+}
+
+void MeetingVerwaltung::outputInfo(){
+    //meeting->displayMeetingInfo();
 }
 

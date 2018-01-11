@@ -10,8 +10,8 @@
 
 class Einladung
 {
+public:
 	std::vector<std::string> namelist;
-		
 };
 
 #endif

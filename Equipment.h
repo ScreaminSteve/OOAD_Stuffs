@@ -9,6 +9,7 @@
 
 class Equipment
 {
+public:
 	std::vector<bool> stuffs;
 	
 	

@@ -16,17 +16,19 @@ public:
     MeetingVerwaltung(){};
     void init();
     void newMeeting();
-    void setCatering(bool isCater);
-    void setDuration(int duration);
-    void setEquipment(std::vector<bool> equipment);
-    void setRoom(int geb, int number);
-    void setTheme(string theme);
-    void setTime(int time);
+    void setCatering(bool);
+    void setDuration(int);
+    void setEquipment(vector<bool>);
+    void setRoom(int, int);
+    void setTheme(string);
+    void setTime(int, int);
+    void setInvites(vector<string>);
     void showRooms();
+    void outputInfo();
     Meeting * meeting;
     Raumverwaltung * raumverwaltung;
 private:
-    //habs aus den gleichen gründen wie du public gemacht
+    
 
 };
 
