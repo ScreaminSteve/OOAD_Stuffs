@@ -10,14 +10,9 @@ using namespace std;
 
 class Benutzer {
 public:
-<<<<<<< HEAD
-    Benutzer(string,string,bool);
-=======
-    
     Benutzer();
     Benutzer(string, string, int);
 
->>>>>>> Hendrik
     bool IsAdmin() const {
         return isAdmin;
     }

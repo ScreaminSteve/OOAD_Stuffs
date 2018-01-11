@@ -46,7 +46,6 @@ void CUI::init() {
         userList >> name >> pw >> isAdmin;
         user.push_back(new Benutzer(name, pw, isAdmin));
     }
->>>>>>> Hendrik
 }
 
 //überprüft gültigkeit des eingegebenen username/pw
@@ -101,7 +100,7 @@ void CUI::login() {
 }
 
 void CUI::logout(){
-    
+    terminate();
 }
 
 void CUI::showMenu() {
