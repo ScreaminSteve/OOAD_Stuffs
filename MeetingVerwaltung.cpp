@@ -30,7 +30,7 @@ void MeetingVerwaltung::showRooms( )
 	
 }
 
-void MeetingVerwaltung::setTheme( ::string theme )
+void MeetingVerwaltung::setTheme( string theme )
 {
 	
 }

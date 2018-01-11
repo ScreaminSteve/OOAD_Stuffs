@@ -22,11 +22,11 @@ public:
     ~CUI();
     void createMeeting();
     void init();
-    void InputCatering();
-    void InputDuration();
-    void InputEquipment();
+    void inputCatering();
+    void inputDuration();
+    void inputEquipment();
     void inputRoom();
-    void InputTime();
+    void inputTime();
     void showMenu();
     bool checkUserList(string, string);
     void login();
@@ -42,6 +42,9 @@ private:
     bool isLoggedIn = false;
     
     vector<Benutzer*> user;
+    
+    //für zugriff auf MeetingVerwaltung von allen funktionen in 
+    MeetingVerwaltung verwaltung;
     
 };
 

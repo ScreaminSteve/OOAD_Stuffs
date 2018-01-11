@@ -24,7 +24,9 @@ void Raumverwaltung::readRoomConfig() {
      
     }
     for (int i = 0; i < raumvect.size(); i++) {
-        cout << raumvect.at(i)->nummer << " " << raumvect.at(i)->plaetze << " " << raumvect.at(i)->gebaeude;
+        //cout << raumvect.at(i)->nummer << " "
+        //<< raumvect.at(i)->plaetze << " "
+        //<< raumvect.at(i)->gebaeude;
     }
 }
 
