@@ -41,7 +41,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/Einladung.o \
 	${OBJECTDIR}/Equipment.o \
 	${OBJECTDIR}/Meeting.o \
-	${OBJECTDIR}/MeetingVerwaltung.o \
 	${OBJECTDIR}/Mitarbeiter.o \
 	${OBJECTDIR}/Raum.o \
 	${OBJECTDIR}/RaumVerwaltung.o \
@@ -66,11 +65,11 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ooad_stuffs-master.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ooad_stuffs.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ooad_stuffs-master.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ooad_stuffs.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ooad_stuffs-master ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/ooad_stuffs ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/Benutzer.o: Benutzer.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -101,11 +100,6 @@ ${OBJECTDIR}/Meeting.o: Meeting.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Meeting.o Meeting.cpp
-
-${OBJECTDIR}/MeetingVerwaltung.o: MeetingVerwaltung.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MeetingVerwaltung.o MeetingVerwaltung.cpp
 
 ${OBJECTDIR}/Mitarbeiter.o: Mitarbeiter.cpp
 	${MKDIR} -p ${OBJECTDIR}

@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=OOAD_Stuffs-master
+PROJECTNAME=OOAD_Stuffs
 
 # Active Configuration
 DEFAULTCONF=Debug

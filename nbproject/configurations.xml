@@ -10,7 +10,6 @@
       <itemPath>Einladung.h</itemPath>
       <itemPath>Equipment.h</itemPath>
       <itemPath>Meeting.h</itemPath>
-      <itemPath>MeetingVerwaltung.h</itemPath>
       <itemPath>Mitarbeiter.h</itemPath>
       <itemPath>Raum.h</itemPath>
       <itemPath>RaumVerwaltung.h</itemPath>
@@ -28,7 +27,6 @@
       <itemPath>Einladung.cpp</itemPath>
       <itemPath>Equipment.cpp</itemPath>
       <itemPath>Meeting.cpp</itemPath>
-      <itemPath>MeetingVerwaltung.cpp</itemPath>
       <itemPath>Mitarbeiter.cpp</itemPath>
       <itemPath>Raum.cpp</itemPath>
       <itemPath>RaumVerwaltung.cpp</itemPath>
@@ -79,10 +77,6 @@
       <item path="Meeting.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Meeting.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="MeetingVerwaltung.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="MeetingVerwaltung.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Mitarbeiter.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -142,10 +136,6 @@
       <item path="Meeting.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Meeting.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="MeetingVerwaltung.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="MeetingVerwaltung.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Mitarbeiter.cpp" ex="false" tool="1" flavor2="0">
       </item>

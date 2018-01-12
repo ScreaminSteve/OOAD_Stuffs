@@ -22,7 +22,7 @@ int main(int argc, char** argv) try{
     CUI console;
     cout<<"Console created"<<endl;
     console.init();
-    cout<<"Init done";
+    //cout<<"Init done";
     console.login();
     
    

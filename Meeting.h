@@ -13,6 +13,7 @@
 
 #include <iostream>
 #include <vector>
+#include <iomanip>
 
 using namespace std;
 
@@ -24,27 +25,20 @@ public:
     void setCatering(bool);
     void setDuration(int);
     void setEquipment(vector<bool>);
-    void setTheme(string theme);
+    void setTheme(string);
+    void setRoom(int, int);
     void setTime(int, int); //muss im design geändert werden, war vorher chrono
     void setInvites(vector<string>);
     void displayMeetingInfo();
 
-//private:          //Musste ich public setzen um aus CUI zugriff zu haben für die ausgabe
-    Catering * catering;
-
+private:          //Musste ich public setzen um aus CUI zugriff zu haben für die ausgabe
+    Catering catering;
     int meetingDuration;
-
-    Einladung * einladung;
-
-    Equipment * equipment;
-
+    Einladung einladung;
+    Equipment equipment;
     Raum room;
-
     string meetingTheme;
-
     int meetingHour, meetingMinute;
-    
-    
 
 };
 
