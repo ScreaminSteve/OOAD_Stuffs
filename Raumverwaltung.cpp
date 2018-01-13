@@ -5,6 +5,7 @@
 
 #include "Raumverwaltung.h"
 #include <iostream>
+#include <iomanip>
 #include <vector>
 using namespace std;
 
@@ -31,19 +32,11 @@ void Raumverwaltung::readRoomConfig() {
 //    }
 //}
 
-void Raumverwaltung::setRoom() {
-
-}
-
-void Raumverwaltung::addRoom() {
-
-}
-
 void Raumverwaltung::printRoomList() {
+    cout << setw(20) << "Gebaeudenummer" << setw(20) << "Raumnummer" << setw(20) << "Platzanzahl" << endl;
     for (int i = 0; i < raumvect.size(); i++) {
-        cout << "Gebaeudenummer: " << raumvect.at(i)->gebaeude << endl;
-        cout << "Raumnummer: " << raumvect.at(i)->nummer << endl;
-        cout << "Platzanzahl: " << raumvect.at(i)->plaetze << endl << endl;
+        cout << setw(20)<<raumvect.at(i)->gebaeude << setw(20) << raumvect.at(i)->nummer << setw(20) << raumvect.at(i)->plaetze << endl;
     }
+    cout<<endl<<endl;
 }
 

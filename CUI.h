@@ -7,6 +7,7 @@
 
 #include "Meeting.h"
 #include "Benutzer.h"
+#include "Raumverwaltung.h"
 
 #include <iostream>
 #include <string>
@@ -34,15 +35,15 @@ public:
     void login();
     void logout();
     void displayMeeting(int);
+    void adduser();
     
 private:
     Benutzer* benutzer;
-    Benutzer* Mitarbeiter;
     bool isLoggedIn = false;
     vector<Benutzer*> user;
     vector<Meeting> createdMeetings;
-
     bool fromNewMeeting = false;
+    Raumverwaltung* raumverwalt;
 };
 
 #endif
